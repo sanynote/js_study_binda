@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>switch</title>
+  </head>
+  <body>
+    <script>
+      const money = 5000;
+      const bread = 3;
+      if (money === 3000 || bread === 3) console.log("삼천원입니다.");
+      else if (money === 5000) console.log("오천원입니다.");
+      else console.log("모르겠습니다.");
+
+      switch (돈) {
+        case 3000:
+          console.log("삼천원입니다.");
+          break;
+        case 5000:
+          break;
+        default:
+          console.log("모르겠습니다.");
+          break;
+      }
+
+      const score = 90;
+      let grade1 = "";
+      if (score > 90) grade1 = "A";
+      else grade1 = "B";
+      const grade2 = score > 90 ? "A" : "B";
+      /*
+
+        [많이 사용하지는 않음, 이렇게 길어지면 그냥 if 로 사용한다]
+
+        const score = 90;
+        let grade1 = "";
+        if (score > 90) grade1 = "A";
+        else if (score > 80) grade1 = "B";
+        else grade1 = "C";
+        const grade2 = score > 90 ? "A" : score > 80 ? "B" : "C";
+
+      
+      */
+    </script>
+  </body>
+</html>
