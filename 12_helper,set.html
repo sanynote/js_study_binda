@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>배열 helper 함수, set</title>
+</head>
+<body>
+	<script>
+		const arr = [1, 2, 3, 4, 5];
+
+		// helper [filter, map, some, every, concat, fill, find, findIndex, includes, indexOf, join]
+		// helper [reverse, slice, splice, sort, length]
+		// for [for, forEach]
+
+		// 내용물을 맵핑한다. (=바꿔준다)
+		// const map = arr.map((value) => {
+		//   return value * 10;
+		// });
+		// console.log("map", map);
+
+		// 한 개라도 해당되는 내용물이 있으면 true, 없으면 false
+		// const some = arr.some((value) => {
+		//   return value < 10;
+		// });
+		// console.log("some", some);
+
+		// 모든 내용물이 있어야 true, 없으면 false
+		// const every = arr.every((value) => {
+		//   return value < 2;
+		// });
+		// console.log("every", every);
+
+		// 배열을 합쳐줘요
+		// const concat = arr.concat(6, 7, 8);
+		// console.log("concat", concat);
+
+		// 모든 내용물을 해당 값으로 바꿔줘요
+		// const fill = arr.fill(10);
+		// console.log("fill", fill);
+
+		// 내용물 중 조건에 해당되는 값을 찾아주는데, 제일 처음에 찾아진 내용물을 출력
+		// const arr2 = ["선희", "선정", "다빈", "더빈"];
+		// const find = arr2.find((value) => {
+		//   return value[0] === "선";
+		// });
+		// console.log("find", find);
+
+		// find랑 같은데 인덱스 값을 찾아줌
+		// const arr3 = ["선희", "선정", "다빈", "더빈"];
+		// const findIndex = arr3.findIndex((value) => {
+		//   return value[0] === "다";
+		// });
+		// console.log("findIndex", findIndex);
+
+		// 해당 내용물이 포함되어 있는지 아닌지
+		// const arr4 = [null, undefined, 3, "선정"];
+		// const includes = arr4.includes(null);
+		// console.log("includes", includes);
+
+		// 해당 내용물이 몇 번째 인덱스에 있는지
+		// findIndex는 해당하는 값이 없으면 undefined, indexOf는 -1
+		// const arr5 = [1, 2, 3, 4, 5];
+		// const indexOf = arr5.indexOf(10);
+		// console.log("indexOf", indexOf);
+
+		// 내용물들 사이에 입력한 값을 넣어서 문자열로 출력
+		// const join = arr.join("-");
+		// console.log("join", join);
+
+		// 내용물을 반전 시킨다. (뒤집어 엎는다)
+		// 원본도 반전시켜요
+		// const reverse = arr.reverse();
+		// console.log("reverse", reverse);
+
+		// 일정 범위만큼 복사해서 새로운 배열로 만들어요
+		// 원본에 영향 없이
+		// (시작 인덱스, 종료 인덱스) (안에 값을 안적으면 원본 그대로 복사해옴)
+		// const slice = arr.slice(0, 5);
+		// console.log("slice", slice);
+
+		// 일정 범위만큼 잘라내기 해서 새로운 배열로 만들어요
+		// 원본에 영향이 가구요
+		// (시작 인덱스, 자를 개수)
+		// (시작 인덱스, 자를 개수, 자른 위치에 추가할 데이터들)
+		// const splice = arr.splice(2, 3);
+		// const splice = arr.splice(2, 3, 10, 11, 12);
+		// console.log("splice", splice);
+		// console.log("arr", arr);
+
+		// 배열을 정렬해줘요
+		// 원본에 영향을 줘요
+		// const arr6 = [4, 5, 3, 1, 2, 10, 20];
+		// const arr7 = ["다", "가", "라", "나"];
+		// const sort6 = arr6.sort();
+		// const sort7 = arr7.sort();
+		// // 커스텀 함수는 복잡해서 나중에 코테 볼쯤에 다시 설명
+		// const sortCustom = arr6.sort((a, b) => {
+		//   return a - b;
+		// });
+		// console.log("sort arr6", sort6);
+		// console.log("sort arr7", sort7);
+		// console.log("sort sortCustom", sortCustom);
+
+		// const length = arr.length;
+		// console.log("length", length);
+
+		// # for (제일 빠름)
+		// for (공간1; 공간2; 공간3) {
+		//   반복할 내용
+		// }
+		// 공간1은 변수를 선언하는 곳
+		// 공간2는 조건을 확인하는 곳
+		// 공간3은 다음 조건을 위해 실행할 코드가 적힐 곳
+		// for (let index = 0; index < 10; index++) {
+		//   console.log(index);
+		// }
+
+		// # for in (느림)
+		// index 값을 가져온다.
+		// const forArr = [1, 2, 3, 4, 5];
+		// for (let index in forArr) {
+		//   console.log(forArr[index]);
+		// }
+
+		// # forEach (보통)
+		// const forArr1 = [10, 20, 30, 40, 50];
+		// forArr1.forEach((value, index, array) => {
+		//   console.log("값", value);
+		//   console.log("인덱스", index);
+		//   console.log("원본배열", array);
+		// });
+
+		// Set
+		// 중복을 허용하지 않음
+		// const set = new Set([1, 1, 1, 2, 2, 3]);
+		// set.add("새로운 변수 추가");
+		// set.add(3); // 추가 안됨
+		// // set.delete("새로운 변수 추가");
+		// // set.clear();
+		// console.log("set", set);
+		// console.log("set size", set.size);
+		// // set.forEach((value, value2, originalSet) => {
+		// //   console.log(value, value2, originalSet);
+		// // });
+		// const setArr = [...set];
+		// console.log("setArr", setArr);
+
+		// Set을 쓰는 경우
+		// 중복을 제거 하고 싶을 때
+		// const arrData1 = [1, 1, 2, 3, 3, 4, 4, 5];
+		// const set = new Set(arrData1);
+		// const arrData2 = [...set];
+	</script>
+</body>
+</html>
