@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+        // 1. 밑에거 따라하기 (요리 3개까지)
+        function 요리(재료1, 재료2) {
+            if (재료1 == "김치" && 재료2 == "물") {
+            return "김치찌개";
+            } else if(재료1 == "참치" && 재료2 == "물"){
+                return "참치찌개";
+            } else if(재료1 == "고기" && 재료2 == "물"){
+                return "고기찌개";
+            }
+
+            return "모름";
+            
+        }
+        const 결과 = 요리("김치", "물");
+        const 결과2 = 요리("참치", "물");
+        const 결과3 = 요리("고기", "물");
+        console.log(결과);
+        console.log(결과2);
+        console.log(결과3);
+        
+
+        // 2. 사칙연산 함수 add, minus, power, divide
+
+        function add(단수) {
+        console.log(단수 + 1);
+        console.log(단수 + 2);
+        console.log(단수 + 3);
+        console.log(단수 + 4);
+        
+        }
+        add(0);
+        
+        function minus(단수) {
+        console.log(단수 - 1);
+        console.log(단수 - 2);
+        console.log(단수 - 3);
+        console.log(단수 - 4);
+        
+        }
+        minus(5);
+
+        function power(단수) {
+        console.log(단수 * 1);
+        console.log(단수 * 2);
+        console.log(단수 * 3);
+        console.log(단수 * 4);
+        
+        }
+        power(2);
+
+        function divide(단수) {
+        console.log(단수 / 1);
+        console.log(단수 / 2);
+        console.log(단수 / 4);
+        console.log(단수 / 10);
+        
+        }
+        divide(10);
+    </script>
+  </body>
+</html>
