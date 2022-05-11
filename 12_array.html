@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      const gram1 = 52;
+      const gram2 = 50;
+      const gram3 = 47;
+      const gram4 = 47;
+      const gram5 = 47;
+      const grams = [52, 50, 47, 47, 47];
+      grams.push(30); // [52, 50, 47, 47, 47, 30] return 6 // 배열의 크기
+      grams.pop(); // [52, 50, 47, 47, 47] return 30
+      grams.unshift(20); // [20, 52, 50, 47, 47, 47] return 1 // 배열의 크기
+      grams.shift(); // [52, 50, 47, 47, 47] return 20
+      grams[1]; // return 50 // 1은 index, index는 0부터 시작
+      grams.at(1); // return 50 // 1은 index, index는 0부터 시작
+      grams.slice(1, 3); // [52, 50, 47, 47, 47] return [50, 47, 47];
+      grams.splice(1, 1); // [52, 47, 47, 47] return [50];
+      grams.splice(1, 3); // [52] return [47, 47, 47];
+      grams = [52, 50, 47, 47, 47];
+      grams.slice(1); // [52, 50, 47, 47, 47] return [50, 47, 47, 47]
+      grams.splice(1); // [52] return [50, 47, 47, 47]
+      grams = [52, 50, 47, 47, 47];
+      grams.splice(2, 1, 56); // [52, 50, 56, 47, 47] return [47]
+      grams.splice(2, 0, 54); // [52, 50, 54, 56, 47, 47] return []
+
+      // 선희 누나
+      const kids = ["재민", "철수", "영희", "선정"];
+      // 1. 다빈이라는 이름을 가진 kid를 맨 뒤에 추가하세오.
+      // 2. 철수를 배열에서 제거하세요.
+      // 3. 선정과 다빈 값을 배열로 출력하세요. (삭제X)
+      // 4. 재민이를 배열에서 제거하고, 잼민이를 배열 맨 앞에 추가하세요.
+
+      // 선정
+      const breads = ["소금빵", "피자빵", "마카롱", "베이글"];
+      // 1. 바게트를 breads를 맨 뒤에 추가하세오.
+      // 2. 피자빵을 배열에서 제거하세요.
+      // 3. 마카롱과 베이글을 배열로 출력하세요. (삭제X)
+      // 4. 소금빵을 배열에서 제거하고, 브라우니를 배열 맨 앞에 추가하세요.
+    </script>
+  </body>
+</html>
