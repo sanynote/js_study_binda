@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>06. 변수끼리 형변환</title>
+</head>
+<body>
+	<script>
+		//[06. 변수끼리 형변환]
+
+		//숫자에서 문자로
+		let test = 5;
+		console.log(test + 5); // 10
+		console.log(test.toString() + 5); //55
+
+		//문자에서 숫자로
+		// 문자- 숫자 하려면, 문자열에 숫자만 들어가있어야 한다.
+		let test1 = "5";
+		console.log(Number(test1) + 5); //10
+		console.log(parseInt(test1) + 5); //10
+		console.log(Number.parseInt(test1) + 5); //10
+
+
+		let test2 = "aa5"
+		//NaN 숫자로 바꿀 수 없는데 강제로 바꾸려고했기때문에 Not a Number
+
+		let b0 = Boolean(5); //true
+		let b1 = Boolean(0); //false
+		let b2 = Boolean(""); //false
+		let b3 = Boolean("a"); //true
+		let b4 = Boolean("true"); //true
+		let b5 = Boolean("false"); //true
+
+		let test3 = true;
+		console.log(test3.toString()); // true
+		console.log(Number(test3)); // true = 1, false = 0
+
+
+	</script>
+</body>
+</html>
