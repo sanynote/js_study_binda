@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>constructor 생성자</title>
+</head>
+<body>
+	<script>
+        // Class Constructor 생성자 (최초실행)
+        class 클래스 {
+        변수1 = 0;
+
+        constructor(외부데이터) {
+            this.변수1 = 외부데이터;
+            console.log("최초실행", 외부데이터)
+        }
+        }
+
+        const 클래스1 = new 클래스("안녕하세요")
+
+        /*
+        // Class Constructor 생성자 (최초실행)
+        class 클래스 {
+        변수1 = 0;
+        변수2 = 1;
+
+        constructor(전달받은변수) {
+            this.함수()
+            console.log(전달받은변수)
+        }
+
+        함수() {
+            console.log("함수 실행")
+        }
+        }
+
+        const 클래스1 = new 클래스("전달 변수")
+        */
+	</script>
+</body>
+</html>

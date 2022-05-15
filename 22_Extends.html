@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extends 상속</title>
+</head>
+<body>
+	<script>
+        // Class Extends 상속
+        class 자동차 {
+        연료 = 100
+        시속 = 10
+
+        주행 () {
+            console.log("부릉")
+        }
+        정지 () {
+            console.log("끼익")
+        }
+        }
+
+        const 자동차1 = new 자동차();
+
+        class 스포츠카 extends 자동차 {
+        부스트() {
+            console.log("부아앙")
+        }
+        }
+
+        const 스포츠카1 = new 스포츠카()
+        스포츠카1.부스트()
+	</script>
+</body>
+</html>
