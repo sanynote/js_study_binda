@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object</title>
+</head>
+<body>
+	<script>
+        const obj = {};
+        console.log(obj);
+
+        const review = {
+        writer: "작성자",
+        contents: "리뷰 내용",
+        star: "별점",
+        date: "날짜",
+        }
+
+        console.log(review);
+        console.log(Object.keys(review));
+        console.log(Object.values(review));
+        console.log(Object.entries(review));
+        console.log(Object.assign(review, {
+        김선정: '바보'
+        }))
+
+        review.새로운키 = "새로운값"
+        review.또다른값 = "또다른값"
+        console.log(review);
+        console.log(review.없는값);
+	</script>
+</body>
+</html>
