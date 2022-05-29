@@ -1,0 +1,34 @@
+
+
+    [네이버 영화페이지]
+
+		let movies = document.querySelector(".lst_detail_t1");
+
+		[...movies.children].map((movie) =>{
+		const title = movie.querySelector("dt.tit a").textContent
+		const poster = movie.querySelector("div.thumb img").src
+		const star = movie.querySelector("div.star_t1 a span.num").textContent
+		return {
+			title: title,
+			poster :poster,
+			star:star,
+		}
+	    })
+
+
+
+    [다음 영화페이지]
+
+        let movies = document.querySelector(".list_movieranking");
+
+        [...movies.children].map((movie) =>{
+		const title = movie.querySelector("strong.tit_item a")?.textContent
+		const poster = movie.querySelector("div.poster_movie img")?.src
+		const star = movie.querySelector("span.txt_grade")?.textContent
+		return {
+			title: title,
+			poster :poster,
+			star:star,
+		}
+	    })
+
