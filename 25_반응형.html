@@ -23,4 +23,50 @@
 
 	</script>
 </body>
+<body>
+    <div class="no-resize">반응형이 아닌 것</div>
+    <div class="resize">반응형인 것</div>
+    <script src="index.js"></script>
+    <style>
+      /* .no-resize {
+        width: 600px;
+        height: 600px;
+        background-color: red;
+      } */
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .resize {
+        width: 50%;
+        height: 50%;
+        background-color: blue;
+      }
+
+
+		/*
+	  		class="div2 div3 div4"
+		*/
+
+		/*
+			DOM 객체 하나하나 자체
+			이 화면에 있는것을 다루는 게 돔을 다루는 것
+
+			자바스크립트만으로 수정
+		*/
+
+		/* 
+		movies.map((movie) => {
+			const thumbnail = movie.querySelector(".thumb img").src;
+			const name = movie.querySelector(".lst_dsc a").textContent;
+			const star = movie.querySelector(".star .num").textContent;
+			return {
+				name: name,
+				star: star,
+				thumbnail: thumbnail
+			}
+		})*/
+    </style>
+  </body>
+
 </html>
