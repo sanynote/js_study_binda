@@ -1,0 +1,81 @@
+    [00_***로 직사각형 만들기]
+
+        process.stdin.setEncoding('utf8');
+        process.stdin.on('data', data => {
+            const n = data.split(" ");
+            const a = Number(n[0]), b = Number(n[1]);
+            
+            for(let index=0; index<b; index++) {
+                console.log("*".repeat(a))
+                
+            }
+
+        });
+
+    [01_짝수일때 Even 홀수일때 Odd]
+
+        1)
+
+            function solution(num) {
+            var answer = num%2;
+            
+            if(answer == 0){
+                return "Even"
+                
+            } else{
+                return "Odd"
+            }
+        }
+
+        2) 삼항연산자 -> 조건문 ? 참일때 : 거짓일때 삼항연산자
+
+            function solution(num) {
+                return num % 2 === 0 ? "Even":"Odd";
+            }
+		
+
+    [02_자연수 뒤집어 배열로 바꾸기]
+
+        1)
+
+            function solution(n) {
+                let a = n.toString()
+                a = a.split("")
+                let answer= a.reverse()
+                answer = answer.map(Number)
+                
+                return answer
+            }
+
+        2) 
+
+            function solution(n) {
+                return n.toString().split("").reverse().map(Number)
+            }
+
+
+    [03_문자열 정수로 바꾸기]
+
+        1)
+
+            function solution(s) {
+
+                let a = s.slice(0,1)
+                let b = s.slice(1)
+                if(a === "+"){
+                    return Number(b)
+                    
+                } else if(a === "-"){
+                    return -1 * Number(b)
+                }
+                else{
+                    return Number(s)
+                }
+            }
+
+        2) parseInt 생각 못 한 내가 싫다~!
+
+            function solution(s) {
+                return parseInt(s) 
+            }
+		
